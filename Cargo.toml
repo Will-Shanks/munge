@@ -1,10 +1,12 @@
 [package]
-name = "munge"
+name = "munge_auth"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Will-Shanks/munge"
+description = "Safe bindings for munge https://github.com/dun/munge"
+keywords = ["hpc", "security"]
 
 [dependencies]
-munge-sys = { path = "../munge-sys" }
+munge-sys = "0.1"
 libc = "0.2"

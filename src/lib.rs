@@ -10,6 +10,15 @@ fn get_err(err: munge_sys::munge_err) -> String {
     msg
 }
 
+/**
+fn main() {
+    let msg = "test message";
+    let encoded_msg = munge(msg).unwrap();
+    println!("{}", encoded_msg);
+    let decoded_msg = unmunge(encoded_msg).unwrap();
+    println!("{:?}", decoded_msg);
+}
+**/
 pub fn munge(msg: &str) -> Result<String, String> {
     let mut cred: *mut ffi::c_char = ptr::null_mut();
     let len: ffi::c_int = msg.len().try_into().unwrap();
@@ -47,13 +56,3 @@ pub fn unmunge(encoded_msg: String) -> Result<Message, String> {
         Ok(Message{msg: resp, uid, gid})
     }
 }
-
-/**
-fn main() {
-    let msg = "test message";
-    let encoded_msg = munge(msg).unwrap();
-    println!("{}", encoded_msg);
-    let decoded_msg = unmunge(encoded_msg).unwrap();
-    println!("{:?}", decoded_msg);
-}
-**/

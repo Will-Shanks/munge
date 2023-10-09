@@ -8,5 +8,5 @@ description = "Safe bindings for munge https://github.com/dun/munge"
 keywords = ["hpc", "security"]
 
 [dependencies]
-munge-sys = "0.1"
+munge-sys = { path = "../munge-sys" }
 libc = "0.2"

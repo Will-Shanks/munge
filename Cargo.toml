@@ -1,6 +1,6 @@
 [package]
 name = "munge_auth"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Will-Shanks/munge"
@@ -8,5 +8,5 @@ description = "Safe bindings for munge https://github.com/dun/munge"
 keywords = ["hpc", "security"]
 
 [dependencies]
-munge-sys = { version = "0.1", features = ["static"] }
+munge-sys = { version="0.1.1", features = ["static"] }
 libc = "0.2"
